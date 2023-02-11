@@ -6,10 +6,10 @@ document.getElementById("btn-deposit").addEventListener("click", function () {
   // For input field we use .value property instead of .innerText
   const newDepositAmount = depositField.value;
 
-    if (newDepositAmount === ''){
+  if (newDepositAmount === "") {
     alert("Please enter a valid amount!");
     return;
-    }
+  }
 
   // Step 3: Get the current deposit total:
   // For non-input field we use .innerText property instead of .value
@@ -41,15 +41,15 @@ document.getElementById("btn-withdraw").addEventListener("click", function () {
   // Step 2: Get the withdraw amount from the withdraw input field:
   const withdrawField = document.getElementById("withdraw-amount");
   const newWithdrawAmount = withdrawField.value;
-  
-  if (newWithdrawAmount === ''){
+
+  if (newWithdrawAmount === "") {
     alert("Please enter a valid amount!");
     return;
   }
-//   console.log(newWithdrawAmount);
+  //   console.log(newWithdrawAmount);
 
   const bt = document.getElementById("balance-total");
-  bt
+  bt;
 
   if (parseFloat(newWithdrawAmount) > parseFloat(bt.innerText)) {
     alert("You don't have enough money in your account!");
