@@ -6,7 +6,7 @@ document.getElementById("btn-deposit").addEventListener("click", function () {
   // For input field we use .value property instead of .innerText
   const newDepositAmount = depositField.value;
 
-  if (newDepositAmount === "") {
+  if (newDepositAmount === "" || newDepositAmount <= 0) {
     alert("Please enter a valid amount!");
     return;
   }
@@ -42,16 +42,17 @@ document.getElementById("btn-withdraw").addEventListener("click", function () {
   const withdrawField = document.getElementById("withdraw-amount");
   const newWithdrawAmount = withdrawField.value;
 
-  if (newWithdrawAmount === "") {
+  if (newWithdrawAmount === "" || newWithdrawAmount <= 0) {
     alert("Please enter a valid amount!");
     return;
   }
   //   console.log(newWithdrawAmount);
 
   const bt = document.getElementById("balance-total");
-  bt;
+  
+  const fixedBalance = parseFloat(bt.innerText);
 
-  if (parseFloat(newWithdrawAmount) > parseFloat(bt.innerText)) {
+  if (parseFloat(newWithdrawAmount) > (fixedBalance > 1000)) {
     alert("You don't have enough money in your account!");
     return;
   }
