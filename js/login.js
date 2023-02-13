@@ -1,4 +1,3 @@
-//console.log('login.js');
 
 // Step 1: Get the form element
 // Add click event listener with the submit button
@@ -20,7 +19,7 @@ document.getElementById("btn-submit").addEventListener("click", function () {
       //console.log("Login successful");
 
       // Step 5: Redirect to the home page
-      window.location.href = "bank.html";
+      window.location.href = "dashboard.html";
     }
     else {
         // console.log("Login failed");
